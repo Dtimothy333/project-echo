@@ -1,0 +1,96 @@
+:root {
+  --echo-bg: #f5f5f7;
+  --echo-card-bg: #ffffff;
+  --echo-border: #e1e3e8;
+  --echo-text-main: #222;
+  --echo-text-muted: #6c757d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: var(--echo-bg);
+  color: var(--echo-text-main);
+}
+
+/* Generic spacing tweaks */
+main {
+  min-height: 70vh;
+}
+
+/* Navbar */
+.navbar-brand i {
+  font-size: 1.2rem;
+}
+
+/* Cards */
+.card {
+  border-radius: 0.75rem;
+  border-color: var(--echo-border);
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+/* Tags / badges inside cards */
+.project-tags,
+.achievement-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+/* Reflection card */
+.reflection-card {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.reflection-card zero-md {
+  display: block;
+}
+
+/* zero-md content styling */
+zero-md::part(rendered) {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+zero-md::part(rendered) h1,
+zero-md::part(rendered) h2,
+zero-md::part(rendered) h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+zero-md::part(rendered) p {
+  margin-bottom: 0.6rem;
+}
+
+zero-md::part(rendered) code {
+  font-size: 0.85em;
+}
+
+/* Footer */
+footer {
+  font-size: 0.85rem;
+}
+
+/* Small helper classes */
+.text-muted {
+  color: var(--echo-text-muted) !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 575.98px) {
+  .display-5 {
+    font-size: 2rem;
+  }
+}
